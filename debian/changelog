@@ -1,5 +1,153 @@
-template-repository (1.0-1) unstable; urgency=medium
+parmap (1.2.5-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * Fix build with recent dune
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 15 Jul 2023 06:51:06 +0200
+
+parmap (1.2.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 22 Jan 2023 10:50:16 +0100
+
+parmap (1.2.4-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 20 Feb 2022 18:00:43 +0100
+
+parmap (1.2.3-1) unstable; urgency=medium
+
+  [ Stéphane Glondu ]
+  * Team upload
+  * New upstream release
+  * Bump Standards-Version to 4.6.0
+  * Update debian/watch
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 30 Nov 2021 07:57:41 +0100
+
+parmap (1.2-1) unstable; urgency=medium
+
+  * New upstream release, which adds support for returning results in
+    the right order from the calls
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Sun, 17 Jan 2021 12:10:12 +0100
+
+parmap (1.1.1-2) unstable; urgency=medium
+
+  * Do not run tests that are too heavy for buildds
+  * Reduce size of remaining tests so that they fit on 32 bit machines
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 15 Feb 2020 10:46:18 +0100
+
+parmap (1.1.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump Standards-Version to 4.5.0
+  * Add Rules-Require-Root: no
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 14 Feb 2020 14:32:03 +0100
+
+parmap (1.0~rc10-3) unstable; urgency=medium
+
+  * Team upload
+  * Add dependency to mmap in META and opam files
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 09 Sep 2019 12:42:36 +0200
+
+parmap (1.0~rc10-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix FTBFS with OCaml 4.08.0
+  * Switch debian/copyright to Format 1.0
+  * Bump debhelper compat level to 12
+  * Bump Standards-Version to 4.4.0
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 03 Sep 2019 07:32:18 +0200
+
+parmap (1.0~rc10-1) unstable; urgency=medium
+
+  * New (bugfix) upstream release
+  * Refresh patches
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Sun, 02 Dec 2018 15:06:35 +0100
+
+parmap (1.0~rc9-2) unstable; urgency=medium
+
+  * Install parmap.cmx in libparmap-ocaml-dev
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Sun, 13 May 2018 14:20:55 +0200
+
+parmap (1.0~rc9-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.4, no changes required
+  * Update Vcs-* fields since Git repository migrated to Salsa
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Fri, 11 May 2018 11:55:39 +0200
+
+parmap (1.0~rc8-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Update Vcs-*
+  * Bump debhelper compat to 9
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 22 Jul 2017 12:41:52 +0200
+
+parmap (1.0~rc7-2) unstable; urgency=medium
+
+  * Team upload
+  * Add ocamlbuild to Build-Depends
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 15 Jul 2017 11:48:15 +0200
+
+parmap (1.0~rc7-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refresh 0001-Update-version-number-in-various-places.patch
+    - Remove 0002-ALIBS-should-be-built-only-on-native-archs.patch,
+      fixed upstream.
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Mon, 18 Jan 2016 00:49:10 +0100
+
+parmap (1.0~rc4-5) unstable; urgency=medium
+
+  * Team upload
+  * Install libparmap_stubs.a on bytecode architectures
+    (Closes: #785304)
+  * Update Vcs-*
+  * Fix debian/watch
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 14 May 2015 16:24:16 +0200
+
+parmap (1.0~rc4-4) unstable; urgency=medium
+
+  * Do not build ALIBS (parmap.a) on bytecode architectures.
+    - add 0002-ALIBS-should-be-built-only-on-native-archs.patch
+    - del 0002-Set-OCAMLBEST-to-native-when-ocamlopt-is-present.patch
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Thu, 09 Oct 2014 15:52:16 +0200
+
+parmap (1.0~rc4-2) unstable; urgency=medium
+
+  * Fix FTBFS on bytecode architectures.
+    - Add patch 0002-Set-OCAMLBEST-to-native-when-ocamlopt-is-present.patch
+      to be able to override OCAMLBEST from d/rules.
+    - Set OCAMLBEST from /u/s/o/ocamlvars.mk in d/rules so that mips*, ppc64el
+      and s390x are not considered as native architectures.
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Thu, 09 Oct 2014 10:05:08 +0200
+
+parmap (1.0~rc4-1) unstable; urgency=medium
+
+  * Initial release (Closes: #761132).
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Wed, 10 Sep 2014 22:52:00 +0200

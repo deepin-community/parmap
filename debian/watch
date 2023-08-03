@@ -1,0 +1,3 @@
+version=4
+opts=uversionmangle=s/-?rc/~rc/ \
+https://github.com/rdicosmo/parmap/releases .*/parmap-v?([-0-9rcbeta.]+)\.tbz
