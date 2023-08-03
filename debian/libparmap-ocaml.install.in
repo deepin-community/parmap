@@ -1,0 +1,4 @@
+@OCamlDllDir@
+@OCamlStdlibDir@/*/META
+@OCamlStdlibDir@/*/*.cma
+DYN: @OCamlStdlibDir@/*/*.cmxs
